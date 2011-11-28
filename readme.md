@@ -30,7 +30,7 @@ A email transport for [winston][0].
   winston.add(winston.transports.Mail, options);
 ```
 
-The Mail transport uses [node-mail](https://github.com/weaver/node-mail) behind the scenes.  Options are the following, 'to' is required:
+The Mail transport uses [node-mail](https://github.com/weaver/node-mail) behind the scenes.  Options are the following, `to` is required:
 
 * __to:__ The name of email address(es) you want to send to. *[required]*
 * __host:__ SMTP server hostname
