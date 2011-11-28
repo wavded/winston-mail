@@ -1,5 +1,5 @@
 /*
- * mongodb-test.js: Tests for instances of the MongoDB transport
+ * winston-mail-test.js: Tests for instances of the Mail transport
  *
  * (C) 2011 Marc Harter
  * MIT LICENSE
@@ -9,6 +9,8 @@ var assert = require('assert');
 var winston = require('winston');
 var helpers = require('winston/test/helpers');
 var Mail = require('../lib/winston-mail').Mail;
+
+console.log('Note this test file uses a internal SMTP server, modify fixtures/test-config to your SMTP server');
 
 function assertMail (transport) {
   assert.instanceOf(transport, Mail);
