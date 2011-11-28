@@ -41,4 +41,4 @@ The Mail transport uses [node-mail](https://github.com/weaver/node-mail) behind 
 * __level:__ Level of messages that this transport should log. 
 * __silent:__ Boolean flag indicating whether to suppress output.
 
-[0]: https://github.com/indexzero/winston
+[0]: https://github.com/flatiron/winston
