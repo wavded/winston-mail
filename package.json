@@ -1,0 +1,22 @@
+{
+  "name": "winston-mail",
+  "description": "A mail transport for winston",
+  "version": "0.0.1",
+  "author": "Marc Harter <wavded@gmail.com>",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/wavded/winston-mail.git"
+  },
+  "keywords": ["logging", "sysadmin", "tools", "winston", "email"],
+  "dependencies": {
+    "mail": ""
+  },
+  "devDependencies": {
+    "winston": "0.4.x",
+    "vows": "0.5.x"
+  },
+  "main": "./lib/winston-mail",
+  "scripts": { "test": "vows test/*-test.js --spec" },
+  "engines": { "node": ">= 0.4.0" }
+}
