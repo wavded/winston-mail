@@ -6,13 +6,13 @@ A email transport for [winston][0].
 
 ### Installing npm (node package manager)
 
-``` bash
+``` sh
   $ curl http://npmjs.org/install.sh | sh
 ```
 
 ### Installing winston-mail
 
-``` bash
+``` sh
   $ npm install winston
   $ npm install winston-mail
 ```
