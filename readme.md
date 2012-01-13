@@ -1,4 +1,4 @@
-# winston-mail
+# winston-mail [![Build Status](https://secure.travis-ci.org/wavded/winston-mail.png)](http://travis-ci.org/wavded/winston-mail)
 
 A email transport for [winston][0].
 
