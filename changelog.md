@@ -1,4 +1,11 @@
 
+0.1.3 / 2012-01-13 
+==================
+
+  * added; dummy SMTP server for tests
+  * updated; test config
+  * added; Travis CI integration
+
 0.1.2 / 2011-11-30 
 ==================
 
