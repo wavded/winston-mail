@@ -2,7 +2,7 @@
    "transports": {
       "mail": {
          "to": "wavded@gmail.com",
-         "host": "172.25.16.96"
+         "host": "localhost"
       }
    }
 }
