@@ -6,7 +6,7 @@
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "http://github.com/ivolo/winston-mail.git"
+    "url": "http://github.com/wavded/winston-mail.git"
   },
   "keywords": ["logging", "sysadmin", "tools", "winston", "email"],
   "dependencies": {
