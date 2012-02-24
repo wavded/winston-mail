@@ -30,7 +30,7 @@ A email transport for [winston][0].
   winston.add(winston.transports.Mail, options);
 ```
 
-The Mail transport uses [emailjs](https://github.com/eleith/emailjs) behind the scenes.  Options are the following, `to` are required:
+The Mail transport uses [emailjs](https://github.com/eleith/emailjs) behind the scenes.  Options are the following:
 
 * __to:__ The address(es) you want to send to. *[required]*
 * __from:__ The address you want to send from. (default: `winston@[server-host-name]`)

@@ -25,7 +25,7 @@ var transport = new (Mail)(config.transports.mail);
 
 vows.describe('winston-mail').addBatch({
  "Start SMTP Server": {
-    topic: function () { setTimeout(this.callback, 2000) }, '': function () { assert.ok(true) }
+    topic: function () { setTimeout(this.callback, 1000) }, '': function () { assert.ok(true) }
  }
 }).addBatch({
  "An instance of the Mail Transport": {
