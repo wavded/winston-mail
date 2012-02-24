@@ -3,7 +3,9 @@
   "description": "A mail transport for winston",
   "version": "0.1.4",
   "author": "Marc Harter <wavded@gmail.com>",
-  "contributors": [],
+  "contributors": [
+     "Ilya Volodarskyi <volodarsky@gmail.com>"
+  ],
   "repository": {
     "type": "git",
     "url": "http://github.com/wavded/winston-mail.git"

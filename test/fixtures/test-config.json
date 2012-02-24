@@ -2,7 +2,6 @@
    "transports": {
       "mail": {
          "to": "wavded@gmail.com",
-         "host": "localhost",
          "port": 2500
       }
    }
