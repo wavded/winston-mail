@@ -15,8 +15,9 @@
     "emailjs": ""
   },
   "devDependencies": {
-    "winston": "0.4.x",
-    "vows": "0.5.x"
+    "winston": "",
+    "simplesmtp": "",
+    "vows": ""
   },
   "main": "./lib/winston-mail",
   "scripts": { "test": "vows test/*-test.js --spec" },
