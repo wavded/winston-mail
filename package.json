@@ -12,7 +12,8 @@
   },
   "keywords": ["logging", "sysadmin", "tools", "winston", "email"],
   "dependencies": {
-    "emailjs": ""
+    "emailjs": "",
+    "underscore": ""
   },
   "devDependencies": {
     "winston": "",
