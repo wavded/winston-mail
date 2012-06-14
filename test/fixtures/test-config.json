@@ -1,8 +1,0 @@
-{
-   "transports": {
-      "mail": {
-         "to": "wavded@gmail.com",
-         "port": 2500
-      }
-   }
-}

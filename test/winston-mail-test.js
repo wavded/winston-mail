@@ -11,17 +11,15 @@ var helpers = require('winston/test/helpers');
 var smtp = require('simplesmtp').createServer();
 var Mail = require('../lib/winston-mail').Mail;
 
-smtp.listen(2500, function (err) {
-   console.log(arguments)
-})
+smtp.listen(2500, function (err) { if (err) console.log(err); });
+smtp.on('dataReady', function (env, cb) { cb(null, 'abc'); });
 
 function assertMail (transport) {
   assert.instanceOf(transport, Mail);
   assert.isFunction(transport.log);
-};
+}
 
-var config = helpers.loadConfig(__dirname)
-var transport = new (Mail)(config.transports.mail);
+var transport = new (Mail)({ to: 'wavded@gmail.com', from: 'dev@server.com', port: 2500 });
 
 vows.describe('winston-mail').addBatch({
  "An instance of the Mail Transport": {
