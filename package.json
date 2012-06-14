@@ -1,10 +1,10 @@
 {
   "name": "winston-mail",
   "description": "A mail transport for winston",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Marc Harter <wavded@gmail.com>",
   "contributors": [
-     "Ilya Volodarskyi <volodarsky@gmail.com>"
+     "Ilya Volodarskyi <volodarsky@gmail.com>",
   ],
   "repository": {
     "type": "git",

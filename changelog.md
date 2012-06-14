@@ -1,4 +1,10 @@
 
+0.2.2 / 2012-06-14 
+==================
+
+  * updated; test suite
+  * adding; underscore templating to subject line [danielschwartz]
+
 0.2.1 / 2012-02-27 
 ==================
 

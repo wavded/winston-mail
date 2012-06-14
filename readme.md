@@ -38,6 +38,7 @@ The Mail transport uses [emailjs](https://github.com/eleith/emailjs) behind the 
 * __port:__ SMTP port (default: 587 or 25)
 * __username__ User for server auth
 * __password__ Password for server auth
+* __subject__ Subject for email (default: winston: {{level}} {{msg}})
 * __ssl:__ Use SSL (boolean or object { key, ca, cert })
 * __tls:__ Boolean (if true, use starttls)
 * __level:__ Level of messages that this transport should log. 
