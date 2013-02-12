@@ -1,4 +1,10 @@
 
+0.2.4 / 2013-02-12 
+==================
+
+  * fixed; allow only single line messages in the subject [emergence]
+  * fixed; changing global underscore templateSettings breaks underscore templating [shawnburke]
+
 0.2.3 / 2012-07-09 
 ==================
 
