@@ -4,23 +4,36 @@
   "version": "0.2.4",
   "author": "Marc Harter <wavded@gmail.com>",
   "contributors": [
-     "Ilya Volodarskyi <volodarsky@gmail.com>"
+    "Ilya Volodarskyi <volodarsky@gmail.com>"
   ],
   "repository": {
     "type": "git",
     "url": "http://github.com/wavded/winston-mail.git"
   },
-  "keywords": ["logging", "sysadmin", "tools", "winston", "email"],
+  "keywords": [
+    "logging",
+    "sysadmin",
+    "tools",
+    "winston",
+    "email"
+  ],
   "dependencies": {
-    "emailjs": "",
-    "underscore": ""
+    "emailjs": "0.3.4",
+    "underscore": "1.4.4"
   },
   "devDependencies": {
     "winston": "",
     "simplesmtp": "",
     "vows": ""
   },
+  "peerDependencies": {
+    "winston": ">=0.5.0 <0.7.0"
+  },
   "main": "./lib/winston-mail",
-  "scripts": { "test": "vows test/*-test.js --spec" },
-  "engines": { "node": ">= 0.6.0" }
+  "scripts": {
+    "test": "vows test/*-test.js --spec"
+  },
+  "engines": {
+    "node": ">= 0.6.0"
+  }
 }

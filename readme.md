@@ -20,13 +20,13 @@ A email transport for [winston][0].
 ## Usage
 ``` js
   var winston = require('winston');
-  
+
   //
-  // Requiring `winston-mail` will expose 
+  // Requiring `winston-mail` will expose
   // `winston.transports.Mail`
   //
   require('winston-mail').Mail;
-  
+
   winston.add(winston.transports.Mail, options);
 ```
 
@@ -41,7 +41,7 @@ The Mail transport uses [emailjs](https://github.com/eleith/emailjs) behind the 
 * __subject__ Subject for email (default: winston: {{level}} {{msg}})
 * __ssl:__ Use SSL (boolean or object { key, ca, cert })
 * __tls:__ Boolean (if true, use starttls)
-* __level:__ Level of messages that this transport should log. 
+* __level:__ Level of messages that this transport should log.
 * __silent:__ Boolean flag indicating whether to suppress output.
 
 [0]: https://github.com/flatiron/winston
