@@ -1,7 +1,7 @@
 {
   "name": "winston-mail",
   "description": "A mail transport for winston",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "author": "Marc Harter <wavded@gmail.com>",
   "contributors": [
     "Ilya Volodarskyi <volodarsky@gmail.com>"
@@ -27,7 +27,7 @@
     "vows": ""
   },
   "peerDependencies": {
-    "winston": ">=0.5.0 <0.7.0"
+    "winston": ">=0.5.0 <0.8.0"
   },
   "main": "./lib/winston-mail",
   "scripts": {
