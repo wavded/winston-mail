@@ -1,4 +1,9 @@
 
+0.2.7 / 2013-07-09 
+==================
+
+ * fixed; Do not add meta into the email body if the object is empty (has not properties) [lobodpav]
+
 0.2.5 / 2013-03-03 
 ==================
 
