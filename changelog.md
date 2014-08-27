@@ -1,4 +1,10 @@
 
+0.2.8 / 2014-08-27
+==================
+
+ * mod; throw Error instance instead of string [jabclab]
+ * add; license to readme
+
 0.2.7 / 2013-07-09 
 ==================
 
