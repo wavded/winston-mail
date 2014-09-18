@@ -27,7 +27,7 @@
     "vows": ""
   },
   "peerDependencies": {
-    "winston": ">=0.5.0 <0.8.0"
+    "winston": ">=0.5.0 <1.0.0"
   },
   "main": "./lib/winston-mail",
   "scripts": {
