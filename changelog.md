@@ -1,4 +1,10 @@
 
+0.3.0 / 2014-12-08
+==================
+
+  * mod; support node >= 0.10
+  * mod; allow override of name [shannonmpoole]
+
 0.2.9 / 2014-09-18
 ==================
 
