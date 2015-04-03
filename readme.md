@@ -43,6 +43,7 @@ The Mail transport uses [emailjs](https://github.com/eleith/emailjs) behind the 
 * __tls:__ Boolean (if true, use starttls)
 * __level:__ Level of messages that this transport should log.
 * __silent:__ Boolean flag indicating whether to suppress output.
+* __html:__ Boolean flag indicating whether to send mail body as html attach.
 
 ## License
 The MIT License (MIT)
