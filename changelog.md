@@ -1,4 +1,11 @@
 
+0.4.0 / 2015-04-13
+==================
+
+  * add; option to send html mails [Thelmos]
+  * mod; support winston 1.0.0
+  * mod; update license info
+
 0.3.2 / 2015-03-06
 ==================
 
