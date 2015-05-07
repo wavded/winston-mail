@@ -45,6 +45,12 @@ The Mail transport uses [emailjs](https://github.com/eleith/emailjs) behind the 
 * __silent:__ Boolean flag indicating whether to suppress output.
 * __html:__ Boolean flag indicating whether to send mail body as html attach.
 
+## Subject templating
+
+The __subject__ option takes a mustache template string that exposes the following fields:
+  - `{{level}}` - Log level
+  - `{{msg}}` - First line of the error message
+
 ## License
 The MIT License (MIT)
 
