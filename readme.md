@@ -42,6 +42,7 @@ The Mail transport uses [emailjs](https://github.com/eleith/emailjs) behind the 
 * __ssl:__ Use SSL (boolean or object { key, ca, cert })
 * __tls:__ Boolean (if true, use starttls)
 * __level:__ Level of messages that this transport should log.
+* __unique:__ Boolean flag indicating whether to log only the declared level and none above.
 * __silent:__ Boolean flag indicating whether to suppress output.
 * __html:__ Boolean flag indicating whether to send mail body as html attach.
 
