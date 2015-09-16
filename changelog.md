@@ -1,4 +1,11 @@
 
+0.5.0 / 2015-09-16
+==================
+
+  * Handle Error meta [perrin4869]
+  * Enable boolean to log only the selected level and none above [jamie-ez]
+  * Docs for subject templating
+
 0.4.0 / 2015-04-13
 ==================
 
