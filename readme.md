@@ -1,33 +1,25 @@
-# winston-mail [![Build Status](https://travis-ci.org/wavded/winston-mail.svg?branch=master)](https://travis-ci.org/wavded/winston-mail)
+![NPM](https://img.shields.io/npm/v/winston-mail.svg) [![Build Status](https://travis-ci.org/wavded/winston-mail.svg?branch=master)](https://travis-ci.org/wavded/winston-mail) ![Downloads](https://img.shields.io/npm/dt/winston-mail.svg)
 
 A email transport for [winston][0].
 
 ## Installation
 
-### Installing npm (node package manager)
-
 ``` sh
-  $ curl http://npmjs.org/install.sh | sh
-```
-
-### Installing winston-mail
-
-``` sh
-  $ npm install winston
-  $ npm install winston-mail
+$ npm install winston
+$ npm install winston-mail
 ```
 
 ## Usage
 ``` js
-  var winston = require('winston');
+var winston = require('winston');
 
-  //
-  // Requiring `winston-mail` will expose
-  // `winston.transports.Mail`
-  //
-  require('winston-mail').Mail;
+/*
+ * Requiring `winston-mail` will expose
+ * `winston.transports.Mail`
+ */
+require('winston-mail').Mail;
 
-  winston.add(winston.transports.Mail, options);
+winston.add(winston.transports.Mail, options);
 ```
 
 The Mail transport uses [emailjs](https://github.com/eleith/emailjs) behind the scenes.  Options are the following:
@@ -55,7 +47,7 @@ The __subject__ option takes a mustache template string that exposes the followi
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2015 Marc Harter
+Copyright (C) 2015 Marc Harter
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
