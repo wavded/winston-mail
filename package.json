@@ -1,7 +1,7 @@
 {
   "name": "winston-mail",
   "description": "A mail transport for winston",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "author": "Marc Harter <wavded@gmail.com>",
   "contributors": [
     "Ilya Volodarskyi <volodarsky@gmail.com>"

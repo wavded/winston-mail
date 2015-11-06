@@ -1,4 +1,12 @@
 
+1.0.0 / 2015-11-06
+==================
+
+  * No breaking changes, just locking in a stable semver
+  * Testing for Node 4/5
+  * Support Winston >=0.5.0 <3.0.0
+  * Add timeout option for setting SMTP timeout
+
 0.5.0 / 2015-09-16
 ==================
 
