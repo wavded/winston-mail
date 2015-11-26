@@ -18,8 +18,8 @@
     "email"
   ],
   "dependencies": {
-    "emailjs": "0.3.13",
-    "underscore": "1.4.4"
+    "emailjs": "1.0.0",
+    "underscore": "1.8.3"
   },
   "devDependencies": {
     "winston": "",

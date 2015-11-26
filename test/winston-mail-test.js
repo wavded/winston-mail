@@ -16,7 +16,7 @@ function assertMail (transport) {
   assert.isFunction(transport.log);
 }
 
-var transport = new (Mail)({ to: 'wavded@gmail.com', from: 'dev@server.com', port: 2500 });
+var transport = new (Mail)({ to: 'jan.apel@gmail.com', from: 'dev@server.com', port: 2500 });
 
 vows.describe('winston-mail').addBatch({
  "An instance of the Mail Transport": {
