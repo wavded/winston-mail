@@ -38,6 +38,7 @@ The Mail transport uses [emailjs](https://github.com/eleith/emailjs) behind the 
 * __silent:__ Boolean flag indicating whether to suppress output.
 * __html:__ Boolean flag indicating whether to send mail body as html attach.
 * __timeout:__ Maximum number of milliseconds to wait for smtp responses (optional, defaults to emailjs defaults - 5000)
+* __authentication:__ Preffered SMTP auth methods (optional, defaults to emailjs defaults - ['PLAIN', 'CRAM-MD5', 'LOGIN', 'XOAUTH2'])
 
 ## Subject templating
 
