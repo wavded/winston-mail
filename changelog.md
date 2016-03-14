@@ -1,4 +1,9 @@
 
+1.1.0 / 2016-03-14
+==================
+
+  * Added authentication param for SMTP server [rafalszemraj]
+
 1.0.1 / 2015-12-11
 ==================
 
