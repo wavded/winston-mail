@@ -39,6 +39,7 @@ The Mail transport uses [emailjs](https://github.com/eleith/emailjs) behind the 
 * __html:__ Boolean flag indicating whether to send mail body as html attach.
 * __timeout:__ Maximum number of milliseconds to wait for smtp responses (optional, defaults to emailjs defaults - 5000)
 * __authentication:__ Preffered SMTP auth methods (optional, defaults to emailjs defaults - ['PLAIN', 'CRAM-MD5', 'LOGIN', 'XOAUTH2'])
+* __formatter:__ Custom mail body formatter with signature `function({level, message, meta})`. If specified, the return value will be used as mail body.
 
 ## Subject templating
 
