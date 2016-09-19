@@ -3,14 +3,14 @@ var winston = require('winston')
 var SMTPServer = require('smtp-server').SMTPServer
 var Mail = require('../lib/winston-mail').Mail
 
-var testFn = () => {}
+var testFn = function() {}
 var smtp = new SMTPServer({
   disabledCommands: ['AUTH'],
   onData: function(stream, session, cb) {
     var data = ''
-    stream.on('data', chunk => data += chunk)
+    stream.on('data', function(chunk) { data += chunk })
     stream.on('error', cb)
-    stream.on('end', () => { testFn(data); cb() })
+    stream.on('end', function() { testFn(data); cb() })
   },
 })
 
@@ -43,7 +43,7 @@ test('winston-mail', function(t) {
     })
     var logger = new winston.Logger({transports: [transport]})
 
-    testFn = data => {
+    testFn = function(data) {
       t.ok(RegExp(tt.test).test(data))
       run(table.shift())
     }
@@ -53,5 +53,5 @@ test('winston-mail', function(t) {
 })
 
 test(function(t) {
-  smtp.close(() => t.end())
+  smtp.close(function() { t.end() })
 })
