@@ -18,20 +18,20 @@
     "email"
   ],
   "dependencies": {
-    "emailjs": "1.0.0",
-    "underscore": "1.8.3"
+    "emailjs": "^1.0.8",
+    "mustache": "^2.2.1"
   },
   "devDependencies": {
-    "winston": "",
-    "simplesmtp": "",
-    "vows": ""
+    "smtp-server": "^1.14.2",
+    "tape": "^4.6.0",
+    "winston": "^2.2.0"
   },
   "peerDependencies": {
     "winston": ">=0.5.0 <3.0.0"
   },
   "main": "./lib/winston-mail",
   "scripts": {
-    "test": "vows test/*-test.js --spec"
+    "test": "tape test/*-test.js"
   },
   "engines": {
     "node": ">= 0.10.0"

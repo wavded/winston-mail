@@ -1,33 +1,57 @@
-/*
- * winston-mail-test.js: Tests for instances of the Mail transport
- */
-var vows = require('vows');
-var assert = require('assert');
-var winston = require('winston');
-var helpers = require('winston/test/helpers');
-var smtp = require('simplesmtp').createServer();
-var Mail = require('../lib/winston-mail').Mail;
+var test = require('tape')
+var winston = require('winston')
+var SMTPServer = require('smtp-server').SMTPServer
+var Mail = require('../lib/winston-mail').Mail
 
-smtp.listen(2500, function (err) { if (err) console.log(err); });
-smtp.on('dataReady', function (env, cb) { cb(null, 'abc'); });
+var testFn = () => {}
+var smtp = new SMTPServer({
+  disabledCommands: ['AUTH'],
+  onData: function(stream, session, cb) {
+    var data = ''
+    stream.on('data', chunk => data += chunk)
+    stream.on('error', cb)
+    stream.on('end', () => { testFn(data); cb() })
+  },
+})
 
-function assertMail (transport) {
-  assert.instanceOf(transport, Mail);
-  assert.isFunction(transport.log);
-}
+test('set up email server', function(t) {
+  smtp.listen(2500, '0.0.0.0', function(er) {
+    t.error(er)
+    t.end()
+  })
+})
 
-var transport = new (Mail)({ to: 'wavded@gmail.com', from: 'dev@server.com', port: 2500 });
+test('winston-mail', function(t) {
+  var table = [
+    {level: 'info', subject: '{{level}}', test: 'info'},
+    {msg: 'goodbye', level: 'error', test: 'goodbye'},
+    {msg: 'hello', level: 'info', subject: '{{msg}}', test: 'hello'},
+    {msg: 'hello', level: 'warn', formatter: d => `!${d.level}!`, test: '!warn!'},
+  ]
 
-vows.describe('winston-mail').addBatch({
- "An instance of the Mail Transport": {
-   "should have the proper methods defined": function () {
-     assertMail(transport);
-   },
-   "the log() method": helpers.testNpmLevels(transport, "should log messages to Mail", function (ign, err, logged) {
-     assert.isTrue(!err);
-     assert.isTrue(logged);
-   })
- }
-}).addBatch({
-  "Tear down": { 'smtp': function () { smtp.end(function () {}) } }
-}).export(module);
+  t.plan(table.length)
+
+  function run(tt) {
+    if (!tt) return
+
+    var transport = new (Mail)({
+      to: 'dev@server.com',
+      from: 'dev@server.com',
+      port: 2500,
+      subject: tt.subject,
+      formatter: tt.formatter,
+    })
+    var logger = new winston.Logger({transports: [transport]})
+
+    testFn = data => {
+      t.ok(RegExp(tt.test).test(data))
+      run(table.shift())
+    }
+    logger[tt.level](tt.msg)
+  }
+  run(table.shift())
+})
+
+test(function(t) {
+  smtp.close(() => t.end())
+})
