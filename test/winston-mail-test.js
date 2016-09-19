@@ -26,7 +26,7 @@ test('winston-mail', function(t) {
     {level: 'info', subject: '{{level}}', test: 'info'},
     {msg: 'goodbye', level: 'error', test: 'goodbye'},
     {msg: 'hello', level: 'info', subject: '{{msg}}', test: 'hello'},
-    {msg: 'hello', level: 'warn', formatter: d => `!${d.level}!`, test: '!warn!'},
+    {level: 'warn', formatter: function(d) { return '!' + d.level + '!' }, test: '!warn!'},
   ]
 
   t.plan(table.length)
