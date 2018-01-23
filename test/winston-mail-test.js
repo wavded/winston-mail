@@ -24,8 +24,8 @@ test('set up email server', function(t) {
 test('winston-mail', function(t) {
   var table = [
     {level: 'info', subject: '{{level}}', test: 'info'},
-    {msg: 'goodbye', level: 'error', test: 'goodbye'},
-    {msg: 'hello', level: 'info', subject: '{{msg}}', test: 'hello'},
+    {message: 'goodbye', level: 'error', test: 'goodbye'},
+    {message: 'hello', level: 'info', subject: '{{message}}', test: 'hello'},
     {level: 'warn', formatter: function(d) { return '!' + d.level + '!' }, test: '!warn!'},
   ]
 
@@ -34,20 +34,21 @@ test('winston-mail', function(t) {
   function run(tt) {
     if (!tt) return
 
-    var transport = new (Mail)({
+    var transport = new Mail({
       to: 'dev@server.com',
       from: 'dev@server.com',
       port: 2500,
       subject: tt.subject,
       formatter: tt.formatter,
     })
-    var logger = new winston.Logger({transports: [transport]})
+    var logger = new winston.createLogger({
+      transports: [transport]});
 
     testFn = function(data) {
       t.ok(RegExp(tt.test).test(data))
       run(table.shift())
     }
-    logger[tt.level](tt.msg)
+    logger.log({level:tt.level, message:tt.message});
   }
   run(table.shift())
 })
