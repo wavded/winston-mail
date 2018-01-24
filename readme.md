@@ -36,6 +36,7 @@ The Mail transport uses [emailjs](https://github.com/eleith/emailjs) behind the 
 * __level:__ Level of messages that this transport should log.
 * __unique:__ Boolean flag indicating whether to log only the declared level and none above.
 * __silent:__ Boolean flag indicating whether to suppress output.
+* __filter:__ Filter function with signature `function({level, message, meta})`. If specified, should return `true` for log messages that need to send.
 * __html:__ Boolean flag indicating whether to send mail body as html attach.
 * __timeout:__ Maximum number of milliseconds to wait for smtp responses (optional, defaults to emailjs defaults - 5000)
 * __authentication:__ Preffered SMTP auth methods (optional, defaults to emailjs defaults - ['PLAIN', 'CRAM-MD5', 'LOGIN', 'XOAUTH2'])
