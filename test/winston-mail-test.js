@@ -22,13 +22,16 @@ test('set up email server', function(t) {
 })
 
 test('winston-mail', function(t) {
+  // get winston version to create tests accordingly
+  let winstonVersion = winston.version,
+      majorWVersion = winstonVersion.split('.')[0];
   var table = [
-    {level: 'info', subject: '{{level}}', test: 'info'},
-    {message: 'goodbye', level: 'error', test: 'goodbye'},
-    {message: 'hello', level: 'info', subject: '{{message}}', test: 'hello'},
-    {level: 'warn', formatter: function(d) { return '!' + d.level + '!' }, test: '!warn!'},
-  ]
-
+        {level: 'info', subject: '{{level}}', test: 'info'},
+        {message: 'goodbye', level: 'error', test: 'goodbye'},
+        {message: 'hello', level: 'info', subject: '{{message}}', test: 'hello'},
+        {level: 'warn', formatter: function(d) { return '!' + d.level + '!' }, test: '!warn!'},
+      ];
+  
   t.plan(table.length)
 
   function run(tt) {
@@ -41,14 +44,27 @@ test('winston-mail', function(t) {
       subject: tt.subject,
       formatter: tt.formatter,
     })
-    var logger = new winston.createLogger({
-      transports: [transport]});
+    var logger;
+
+    if (majorWVersion >= 3) {
+      logger = new winston.createLogger({
+        transports: [transport]});
+    } else {
+        logger = new winston.Logger({
+              transports: [transport]});
+    }
 
     testFn = function(data) {
       t.ok(RegExp(tt.test).test(data))
       run(table.shift())
     }
-    logger.log({level:tt.level, message:tt.message});
+    if (majorWVersion >= 3) {
+      // for version 3 and above use the new log function with info object as a parameter
+      logger.log({level:tt.level, message:tt.message});
+    } else {
+      // for version bellow 3 use the old log function with 3 parameters: level, message, meta
+      logger[tt.level](tt.message);
+    }
   }
   run(table.shift())
 })

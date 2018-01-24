@@ -22,12 +22,12 @@
     "mustache": "^2.2.1"
   },
   "devDependencies": {
-    "smtp-server": "^3.4.1",
+    "smtp-server": "^1.14.2",
     "tape": "^4.6.0",
-    "winston": "^3.0.0-rc1"
+    "winston": "^2.2.0"
   },
   "peerDependencies": {
-    "winston": ">3.0.0"
+    "winston": ">=0.5.0 <3.0.0"
   },
   "main": "./lib/winston-mail",
   "scripts": {
