@@ -23,7 +23,7 @@ test('set up email server', function(t) {
 
 test('winston-mail', function(t) {
   // get winston version to create tests accordingly
-  let winstonVersion = winston.version,
+  var winstonVersion = winston.version,
       majorWVersion = winstonVersion.split('.')[0];
   var table = [
         {level: 'info', subject: '{{level}}', test: 'info'},
