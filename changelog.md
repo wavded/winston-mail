@@ -1,137 +1,117 @@
-1.3.0 / 2016-09-18
-==================
+# 1.4.0 / 2018-01-26
 
--	Bump emailjs dependency to latest (1.0.8).
--	Fix "Callback was already called" [falxcerebri]
+- Add filtration [eugeny-dementev]
 
-1.2.0 / 2016-04-29
-==================
+# 1.3.0 / 2016-09-18
 
--	Added custom formatter [drahnieR]
+- Bump emailjs dependency to latest (1.0.8).
+- Fix "Callback was already called" [falxcerebri]
 
-1.1.0 / 2016-03-14
-==================
+# 1.2.0 / 2016-04-29
 
--	Added authentication param for SMTP server [rafalszemraj]
+- Added custom formatter [drahnieR]
 
-1.0.1 / 2015-12-11
-==================
+# 1.1.0 / 2016-03-14
 
--	Update emailjs and underscore dependency
+- Added authentication param for SMTP server [rafalszemraj]
 
-1.0.0 / 2015-11-06
-==================
+# 1.0.1 / 2015-12-11
 
--	No breaking changes, just locking in a stable semver
--	Testing for Node 4/5
--	Support Winston >=0.5.0 <3.0.0
--	Add timeout option for setting SMTP timeout
+- Update emailjs and underscore dependency
 
-0.5.0 / 2015-09-16
-==================
+# 1.0.0 / 2015-11-06
 
--	Handle Error meta [perrin4869]
--	Enable boolean to log only the selected level and none above [jamie-ez]
--	Docs for subject templating
+- No breaking changes, just locking in a stable semver
+- Testing for Node 4/5
+- Support Winston >=0.5.0 <3.0.0
+- Add timeout option for setting SMTP timeout
 
-0.4.0 / 2015-04-13
-==================
+# 0.5.0 / 2015-09-16
 
--	add; option to send html mails [Thelmos]
--	mod; support winston 1.0.0
--	mod; update license info
+- Handle Error meta [perrin4869]
+- Enable boolean to log only the selected level and none above [jamie-ez]
+- Docs for subject templating
 
-0.3.2 / 2015-03-06
-==================
+# 0.4.0 / 2015-04-13
 
--	dep; emailjs@0.3.13 to fix multiple callback issue
+- add; option to send html mails [Thelmos]
+- mod; support winston 1.0.0
+- mod; update license info
 
-0.3.1 / 2015-02-11
-==================
+# 0.3.2 / 2015-03-06
 
--	fix; emailjs [msecs must be header] issue [ivan-kleshnin]
+- dep; emailjs@0.3.13 to fix multiple callback issue
 
-0.3.0 / 2014-12-08
-==================
+# 0.3.1 / 2015-02-11
 
--	mod; support node >= 0.10
--	mod; allow override of name [shannonmpoole]
+- fix; emailjs [msecs must be header] issue [ivan-kleshnin]
 
-0.2.9 / 2014-09-18
-==================
+# 0.3.0 / 2014-12-08
 
--	mod; bump peer dep to <1.0.0
+- mod; support node >= 0.10
+- mod; allow override of name [shannonmpoole]
 
-0.2.8 / 2014-08-27
-==================
+# 0.2.9 / 2014-09-18
 
--	mod; throw Error instance instead of string [jabclab]
--	add; license to readme
+- mod; bump peer dep to <1.0.0
 
-0.2.7 / 2013-07-09
-==================
+# 0.2.8 / 2014-08-27
 
--	fixed; Do not add meta into the email body if the object is empty (has not properties) [lobodpav]
+- mod; throw Error instance instead of string [jabclab]
+- add; license to readme
 
-0.2.5 / 2013-03-03
-==================
+# 0.2.7 / 2013-07-09
 
--	added; peer deps
--	language fixes [eitanpo]
+- fixed; Do not add meta into the email body if the object is empty (has not properties) [lobodpav]
 
-0.2.4 / 2013-02-12
-==================
+# 0.2.5 / 2013-03-03
 
--	fixed; allow only single line messages in the subject [emergence]
--	fixed; changing global underscore templateSettings breaks underscore templating [shawnburke]
+- added; peer deps
+- language fixes [eitanpo]
 
-0.2.3 / 2012-07-09
-==================
+# 0.2.4 / 2013-02-12
 
--	removed; support for node 0.4.x
--	added; travis for 0.8.x
+- fixed; allow only single line messages in the subject [emergence]
+- fixed; changing global underscore templateSettings breaks underscore templating [shawnburke]
 
-0.2.2 / 2012-06-14
-==================
+# 0.2.3 / 2012-07-09
 
--	updated; test suite
--	adding; underscore templating to subject line [danielschwartz]
+- removed; support for node 0.4.x
+- added; travis for 0.8.x
 
-0.2.1 / 2012-02-27
-==================
+# 0.2.2 / 2012-06-14
 
--	updated; test suite
+- updated; test suite
+- adding; underscore templating to subject line [danielschwartz]
 
-0.2.0 / 2012-02-24
-==================
+# 0.2.1 / 2012-02-27
 
--	updated; changed email module to emailjs
+- updated; test suite
 
-0.1.3 / 2012-01-13
-==================
+# 0.2.0 / 2012-02-24
 
--	added; dummy SMTP server for tests
--	updated; test config
--	added; Travis CI integration
+- updated; changed email module to emailjs
 
-0.1.2 / 2011-11-30
-==================
+# 0.1.3 / 2012-01-13
 
--	added; pretty json printing
+- added; dummy SMTP server for tests
+- updated; test config
+- added; Travis CI integration
 
-0.1.1 / 2011-11-30
-==================
+# 0.1.2 / 2011-11-30
 
--	fixed; uncaughtException not firing
+- added; pretty json printing
 
-0.1.0 / 2011-11-29
-==================
+# 0.1.1 / 2011-11-30
 
--	updated; readme docs
--	updated; changed default from to winston@[server-host]
--	updated; tests
+- fixed; uncaughtException not firing
 
-0.0.1 / 2011-11-28
-==================
+# 0.1.0 / 2011-11-29
 
--	initial release
+- updated; readme docs
+- updated; changed default from to winston@[server-host]
+- updated; tests
+
+# 0.0.1 / 2011-11-28
+
+- initial release
