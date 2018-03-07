@@ -27,7 +27,7 @@
     "winston": "^2.2.0"
   },
   "peerDependencies": {
-    "winston": ">=0.5.0 <3.0.0"
+    "winston": ">=0.5.0"
   },
   "main": "./lib/winston-mail",
   "scripts": {
