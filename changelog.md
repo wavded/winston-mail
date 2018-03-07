@@ -1,4 +1,8 @@
 
+# 1.5.1 / 2018-03-07
+
+- Fix peer dependency for Winston 3.0
+
 # 1.5.0 / 2018-03-07
 
 - Support for Winston 3.0 [bcosma]
