@@ -1,3 +1,8 @@
+
+# 1.5.0 / 2018-03-07
+
+- Support for Winston 3.0 [bcosma]
+
 # 1.4.0 / 2018-01-26
 
 - Add filtration [eugeny-dementev]
