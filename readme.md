@@ -17,7 +17,7 @@ var winston = require('winston');
  * Requiring `winston-mail` will expose
  * `winston.transports.Mail`
  */
-require('winston-mail').Mail;
+require('winston-mail');
 
 winston.add(winston.transports.Mail, options);
 ```
