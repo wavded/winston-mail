@@ -1,3 +1,7 @@
+# 1.5.2 / 2019-01-03
+
+- Fix legacy warnings for Winston 3.0 [ericdrobinson]
+- Update import statement on README [dickenwong]
 
 # 1.5.1 / 2018-03-07
 
