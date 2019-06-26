@@ -1,3 +1,8 @@
+# 2.0.0 / 2019-06-26
+
+- Update 'emailjs' dependency
+- Drop support for legacy Node versions (4.0 and 0.12)
+
 # 1.5.2 / 2019-01-03
 
 - Fix legacy warnings for Winston 3.0 [ericdrobinson]
